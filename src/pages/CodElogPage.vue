@@ -9,6 +9,7 @@
       </p>
       <div>
         <q-btn id="register" @click="alert">Register</q-btn>
+        <q-btn id="register2">Register2</q-btn>
       </div>
     </div>
   </q-page>
