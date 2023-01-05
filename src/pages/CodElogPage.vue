@@ -4,8 +4,9 @@
       <h1>CodElog</h1>
       <p>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe ab odio,
-        ut dicta optio nam quaerat eligendi! Error eaque aperiam libero quia
-        perspiciatis at rerum omnis! Delectus, cum. Nisi, consequuntur?
+        ut dicta optio nam quaerat eligendi! Error eaque
+        <a href="#operaty" id="linkoperaty">operaty</a> libero quia perspiciatis
+        at rerum omnis! Delectus, cum. Nisi, consequuntur?
       </p>
       <div>
         <q-btn id="register" @click="alert">Register</q-btn>
