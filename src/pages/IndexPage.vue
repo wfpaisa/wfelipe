@@ -34,10 +34,20 @@ import { Meta } from 'components/models';
 
 import { defineComponent, ref } from 'vue';
 import { useQuasar } from 'quasar';
+import { useRouter } from 'vue-router';
+
 export default defineComponent({
   name: 'IndexPage',
   components: {},
   setup() {
+    const router = useRouter();
+    const redirect = sessionStorage.getItem('redirect');
+    if (redirect) {
+      router.push(redirect);
+      sessionStorage.removeItem('redirect');
+      return;
+    }
+
     const $q = useQuasar();
 
     console.log($q.dark.mode);
