@@ -1,1 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,400&family=Spectral:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 // app global css in SCSS form
+
+@font-face {
+  font-family: 'CanelaDeck';
+  font-style: normal;
+  font-weight: 700;
+  src: url(/fonts/canela/CanelaDeck-Bold.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'CanelaDeck';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/fonts/canela/CanelaDeck-Regular.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'CanelaDeck';
+  font-style: normal;
+  font-weight: 300;
+  src: url(/fonts/canela/CanelaDeck-Light.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'CanelaText';
+  font-style: normal;
+  font-weight: 300;
+  src: url(/fonts/canela/CanelaText-Light.woff2) format('woff2');
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background: #ffffff; //f6f5f1
+  color: #3b3b66; //353534
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'CanelaDeck', serif;
+}
+
+.container {
+  width: 1200px;
+  max-width: 100%;
+  padding: 0 1rem;
+  margin: auto;
+}
+
+a {
+  color: #5511c1;
+}

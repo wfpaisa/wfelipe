@@ -1,15 +1,8 @@
 <template>
-  <q-item
-    clickable
-    tag="a"
-    target="_blank"
-    :href="link"
-  >
-    <q-item-section
-      v-if="icon"
-      avatar
-    >
+  <q-item clickable v-on:click="goLink(link, external)">
+    <q-item-section v-if="icon" avatar>
       <q-icon :name="icon" />
+      <!-- <span class="material-symbols-outlined"> home </span> -->
     </q-item-section>
 
     <q-item-section>
@@ -27,23 +20,38 @@ export default defineComponent({
   props: {
     title: {
       type: String,
-      required: true
+      required: true,
     },
 
     caption: {
       type: String,
-      default: ''
+      default: '',
     },
 
     link: {
       type: String,
-      default: '#'
+      default: '#',
     },
 
     icon: {
       type: String,
-      default: ''
-    }
-  }
+      default: '',
+    },
+
+    external: {
+      type: Boolean,
+      default: false,
+    },
+  },
+  methods: {
+    goLink(url: string, external: boolean) {
+      if (external) {
+        window.open(url, '_blank');
+        return;
+      }
+
+      this.$router.push(url);
+    },
+  },
 });
 </script>

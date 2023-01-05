@@ -1,36 +1,42 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
-    <q-header elevated>
+  <q-layout view="hhr lpR ffr">
+    <q-header class="bg-transparent text-black">
       <q-toolbar>
-        <q-btn
-          flat
-          dense
-          round
-          icon="menu"
-          aria-label="Menu"
-          @click="toggleLeftDrawer"
-        />
-
         <q-toolbar-title>
-          Quasar App
+          <router-link :to="{ path: '/' }">
+            <q-avatar>
+              <img
+                src="https://cdn.quasar.dev/logo-v2/svg/logo-mono-black.svg"
+              />
+            </q-avatar>
+          </router-link>
         </q-toolbar-title>
 
-        <div>Quasar v{{ $q.version }}</div>
+        <div class="menu">
+          <router-link :to="{ path: 'about' }">About</router-link>
+          <router-link :to="{ path: 'codelog' }">CodElog</router-link>
+          <router-link :to="{ path: 'projects' }">Projects</router-link>
+        </div>
+
+        <q-btn
+          dense
+          flat
+          round
+          icon="sym_r_menu"
+          class="btn-menu"
+          @click="toggleRightDrawer"
+        />
       </q-toolbar>
     </q-header>
 
     <q-drawer
-      v-model="leftDrawerOpen"
-      show-if-above
-      bordered
+      v-model="rightDrawerOpen"
+      side="right"
+      overlay
+      behavior="mobile"
+      elevated
     >
-      <q-list>
-        <q-item-label
-          header
-        >
-          Essential Links
-        </q-item-label>
-
+      <q-list class="q-pt-md">
         <EssentialLink
           v-for="link in essentialLinks"
           :key="link.title"
@@ -42,6 +48,17 @@
     <q-page-container>
       <router-view />
     </q-page-container>
+
+    <q-footer class="bg-transparent text-center footer">
+      <q-toolbar>
+        <q-toolbar-title>
+          <div class="container">
+            <div>@wfelipe</div>
+            <div>Javascript, CSS, HTML, SVG</div>
+          </div>
+        </q-toolbar-title>
+      </q-toolbar>
+    </q-footer>
   </q-layout>
 </template>
 
@@ -51,66 +68,71 @@ import EssentialLink from 'components/EssentialLink.vue';
 
 const linksList = [
   {
-    title: 'Docs',
-    caption: 'quasar.dev',
-    icon: 'school',
-    link: 'https://quasar.dev'
+    title: 'Home',
+    caption: '',
+    icon: 'sym_r_home_app_logo',
+    link: '/',
+  },
+
+  {
+    title: 'About',
+    caption: 'Felipe Uribe',
+    icon: 'sym_r_eco',
+    link: '/about',
   },
   {
     title: 'Github',
-    caption: 'github.com/quasarframework',
-    icon: 'code',
-    link: 'https://github.com/quasarframework'
+    caption: 'github.com/wfpaisa',
+    icon: 'sym_r_code_blocks',
+    link: 'https://github.com/wfpaisa',
+    external: true,
   },
-  {
-    title: 'Discord Chat Channel',
-    caption: 'chat.quasar.dev',
-    icon: 'chat',
-    link: 'https://chat.quasar.dev'
-  },
-  {
-    title: 'Forum',
-    caption: 'forum.quasar.dev',
-    icon: 'record_voice_over',
-    link: 'https://forum.quasar.dev'
-  },
-  {
-    title: 'Twitter',
-    caption: '@quasarframework',
-    icon: 'rss_feed',
-    link: 'https://twitter.quasar.dev'
-  },
-  {
-    title: 'Facebook',
-    caption: '@QuasarFramework',
-    icon: 'public',
-    link: 'https://facebook.quasar.dev'
-  },
-  {
-    title: 'Quasar Awesome',
-    caption: 'Community Quasar projects',
-    icon: 'favorite',
-    link: 'https://awesome.quasar.dev'
-  }
 ];
 
 export default defineComponent({
   name: 'MainLayout',
 
   components: {
-    EssentialLink
+    EssentialLink,
   },
 
-  setup () {
-    const leftDrawerOpen = ref(false)
+  setup() {
+    const rightDrawerOpen = ref(false);
 
     return {
       essentialLinks: linksList,
-      leftDrawerOpen,
-      toggleLeftDrawer () {
-        leftDrawerOpen.value = !leftDrawerOpen.value
-      }
-    }
-  }
+      rightDrawerOpen,
+      toggleRightDrawer() {
+        rightDrawerOpen.value = !rightDrawerOpen.value;
+      },
+    };
+  },
 });
 </script>
+<style lang="scss">
+.menu {
+  a {
+    padding: 0.25rem 0.5rem;
+    text-decoration: none;
+    border-radius: 0.25rem;
+    color: rgb(21, 25, 54);
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+  }
+}
+
+.footer .container {
+  color: black;
+  font-size: 70%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-menu {
+  @media (min-width: $breakpoint-xs-max) {
+    display: none;
+  }
+}
+</style>
