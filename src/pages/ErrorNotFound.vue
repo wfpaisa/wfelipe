@@ -3,9 +3,9 @@
     class="fullscreen bg-blue text-white text-center q-pa-md flex flex-center"
   >
     <div>
-      <div style="font-size: 30vh">404</div>
+      <h1>404</h1>
 
-      <div class="text-h2" style="opacity: 0.4">Oops. Nothing here...</div>
+      <p style="opacity: 0.4">Oops. Nothing here...</p>
 
       <q-btn
         class="q-mt-xl"
@@ -27,3 +27,12 @@ export default defineComponent({
   name: 'ErrorNotFound',
 });
 </script>
+
+<style scoped lang="scss">
+h1 {
+  font-size: 20vh;
+}
+p {
+  font-size: var(--font-size-xl);
+}
+</style>
