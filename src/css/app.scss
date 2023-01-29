@@ -43,7 +43,7 @@ body {
 }
 
 #q-app {
-  padding: 0 1rem;
+  padding: 0 0rem;
 
   &::after,
   &::before {
@@ -148,10 +148,14 @@ small {
 .container,
 main.q-page {
   // background: rgba(0, 0, 0, 0.1);
-  width: 1000px;
+  // width: 1000px;
   max-width: 100%;
   padding: 0 1rem;
   margin: auto;
+}
+
+.container {
+  width: 1000px;
 }
 
 a {

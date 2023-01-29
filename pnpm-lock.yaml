@@ -12,6 +12,7 @@ specifiers:
   eslint: ^8.31.0
   eslint-config-prettier: ^8.6.0
   eslint-plugin-vue: ^9.8.0
+  gsap: ^3.11.4
   pinia: ^2.0.28
   prettier: ^2.8.1
   quasar: ^2.11.3
@@ -23,6 +24,7 @@ specifiers:
 dependencies:
   '@quasar/extras': 1.15.9
   axios: 0.21.4
+  gsap: 3.11.4
   pinia: 2.0.28_prq2uz4lho2pwp6irk4cfkrxwu
   quasar: 2.11.3
   vue: 3.2.45
@@ -1861,6 +1863,10 @@ packages:
   /grapheme-splitter/1.0.4:
     resolution: {integrity: sha512-bzh50DW9kTPM00T8y4o8vQg89Di9oLJVLW/KaOGIXJWP/iqCN6WKYkbNOF04vFLJhwcpYUh9ydh/+5vpOqV4YQ==}
     dev: true
+
+  /gsap/3.11.4:
+    resolution: {integrity: sha512-McHhEguHyExMMnjqKA8G+7TvxmlKQGMbjgwAilnFe1e4id7V/tFveRQ2YMZhTYu0oxHGWvbPltdVYQOu3z1SCA==}
+    dev: false
 
   /has-flag/4.0.0:
     resolution: {integrity: sha512-EykJT/Q1KjTWctppgIAgfSO0tKVuZUjhgMr17kqTumMl6Afv3EISleU7qZUzoXDFTAHTDC4NOoG/ZxU3EvlMPQ==}

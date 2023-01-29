@@ -103,21 +103,21 @@ const linksList = [
   {
     title: 'About',
     caption: 'Felipe Uribe',
-    icon: 'sym_r_eco',
+    icon: 'sym_r_fingerprint',
     link: '#about',
   },
 
   {
     title: 'Work',
     caption: 'My history',
-    icon: 'sym_r_eco',
+    icon: 'sym_r_business_center',
     link: '#work',
   },
 
   {
     title: 'Projects',
     caption: 'All projects',
-    icon: 'sym_r_fingerprint',
+    icon: 'sym_r_code_blocks',
     link: '#projects',
     external: false,
   },
@@ -173,7 +173,7 @@ header {
   }
 
   &.q-header {
-    background-color: hsla(var(--color-bg-base), 17%, 90%);
+    background-color: hsla(var(--color-bg-base), 17%, 60%);
     backdrop-filter: blur(8px);
     top: 1rem;
     margin-left: 1rem;
@@ -237,13 +237,18 @@ header {
   background: none;
 
   .content {
-    margin-top: 4rem;
-    padding: 2rem 0;
     color: var(--color-fg);
+    padding: 0px;
+    margin: 0px;
+
+    @media (max-width: $breakpoint-md-max) {
+      padding: 2rem 0;
+    }
 
     .container {
       display: flex;
       justify-content: space-between;
+      padding: 0 2rem;
     }
 
     .f-p1 {
@@ -273,7 +278,7 @@ header {
         margin-left: 1rem;
       }
 
-      @media (min-width: $breakpoint-md-max) {
+      @media (min-width: $breakpoint-sm-max) {
         writing-mode: vertical-lr;
         position: fixed;
         transform: rotate(-180deg);
@@ -299,11 +304,14 @@ header {
       align-items: center;
       gap: 1rem;
       font-size: var(--font-size-md);
-      position: fixed;
-      right: 2.5rem;
-      bottom: 40%;
-      writing-mode: vertical-rl;
-      text-orientation: upright;
+
+      @media (min-width: $breakpoint-sm-max) {
+        bottom: 40%;
+        position: fixed;
+        right: 2.5rem;
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+      }
 
       a {
         display: inline-block;
