@@ -3,7 +3,12 @@
   <article class="project dir-lf">
     <div class="project-img">
       <div>
-        <img src="imgs/projects/plane-theme-s.png" alt="plane theme" />
+        <img
+          src="imgs/projects/plane-theme-s.webp"
+          alt="plane theme"
+          width="1920"
+          height="1200"
+        />
       </div>
     </div>
 
@@ -17,10 +22,18 @@
           A beautiful dark theme for Gnome Linux with a modern and minimalistic
           design, making it easy on the eyes and providing a sleek look for your
           desktop. <br />
-          <a href="https://github.com/wfpaisa/plane-theme" target="_blank">
+          <a
+            href="https://github.com/wfpaisa/plane-theme"
+            target="_blank"
+            aria-label="repo plane theme link"
+          >
             <i class="icon-logo-github"></i>
           </a>
-          <a href="https://www.gnome-look.org/p/1198768/" target="_blank">
+          <a
+            href="https://www.gnome-look.org/p/1198768/"
+            target="_blank"
+            aria-label="open project in gnome-look"
+          >
             <i class="icon-logo-tux"></i>
           </a>
         </p>
@@ -48,10 +61,18 @@
           16px, 24px, 32px, 48px, 64px, 96px, 128px, uses JavaScript to generate
           each file in different sizes.
           <br />
-          <a href="https://github.com/wfpaisa/plane-icon-theme" target="_blank">
+          <a
+            href="https://github.com/wfpaisa/plane-icon-theme"
+            target="_blank"
+            aria-label="open plane icon theme repo"
+          >
             <i class="icon-logo-github"></i>
           </a>
-          <a href="https://www.gnome-look.org/p/1178976/" target="_blank">
+          <a
+            href="https://www.gnome-look.org/p/1178976/"
+            target="_blank"
+            aria-label="open project in gnome-look"
+          >
             <i class="icon-logo-tux"></i>
           </a>
         </p>
@@ -65,7 +86,12 @@
 
     <div class="project-img">
       <div>
-        <img src="imgs/projects/icon-theme.png" alt="plane icon theme" />
+        <img
+          src="imgs/projects/icon-theme.webp"
+          alt="plane icon theme"
+          width="1600"
+          height="1000"
+        />
       </div>
     </div>
   </article>
@@ -74,7 +100,12 @@
   <article class="project dir-lf">
     <div class="project-img">
       <div>
-        <img src="imgs/projects/plane-theme-s.png" alt="plane theme" />
+        <img
+          src="imgs/projects/plane-theme-s.webp"
+          alt="plane theme"
+          width="1920"
+          height="1200"
+        />
       </div>
     </div>
 
@@ -88,7 +119,11 @@
           A beautiful dark theme for Gnome Linux with a modern and minimalistic
           design, making it easy on the eyes and providing a sleek look for your
           desktop. <br />
-          <a href="https://github.com/wfpaisa/plane-theme" target="_blank">
+          <a
+            href="https://github.com/wfpaisa/plane-theme"
+            target="_blank"
+            aria-label="open plane theme repo"
+          >
             <i class="icon-logo-github"></i>
           </a>
         </p>
@@ -118,9 +153,9 @@ export default defineComponent({
        */
       gsap.registerPlugin(ScrollTrigger);
 
-      const boxes = gsap.utils.toArray<HTMLElement>('.project');
-      console.log('boxes', boxes);
-      boxes.forEach((box) => {
+      const boxes3 = gsap.utils.toArray<HTMLElement>('.project');
+
+      boxes3.forEach((box) => {
         gsap.fromTo(
           box,
           { opacity: 0.1, y: 100, scale: 0.9 },

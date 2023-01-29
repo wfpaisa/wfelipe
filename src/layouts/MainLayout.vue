@@ -20,7 +20,12 @@
             :key="key"
             :to="{ path: link.link }"
           > -->
-          <a v-for="(link, key) in essentialLinks" :key="key" :href="link.link">
+          <a
+            v-for="(link, key) in essentialLinks"
+            :key="key"
+            :href="link.link"
+            :aria-label="`link to section ${link.title}`"
+          >
             <span>0{{ key + 1 }}.</span> {{ link.title }}
           </a>
           <!-- </router-link> -->
@@ -34,6 +39,7 @@
           icon="sym_r_menu"
           class="btn-menu"
           @click="toggleRightDrawer"
+          aria-label="open menu"
         />
       </q-toolbar>
     </q-header>
@@ -63,16 +69,33 @@
       <div class="content">
         <div class="container">
           <div class="f-p1">
-            <a href="mailto:hi@wfelipe.com" class="link">hi@wfelipe.com</a>
+            <a
+              href="mailto:hi@wfelipe.com"
+              class="link"
+              aria-label="mail to wfelipe"
+              >hi@wfelipe.com</a
+            >
           </div>
           <div class="f-p2">
-            <a href="https://github.com/wfpaisa/" target="_blank">
+            <a
+              href="https://github.com/wfpaisa/"
+              target="_blank"
+              aria-label="profile in github of felipe uribe"
+            >
               <i class="icon-logo-github"></i>
             </a>
-            <a href="https://www.linkedin.com/in/felipe-uribe" target="_blank">
+            <a
+              href="https://www.linkedin.com/in/felipe-uribe"
+              target="_blank"
+              aria-label="profile in linkedin of felipe uribe"
+            >
               <i class="icon-logo-linkedin"></i>
             </a>
-            <a href="https://www.opendesktop.org/u/wfpaisa" target="_blank">
+            <a
+              href="https://www.opendesktop.org/u/wfpaisa"
+              target="_blank"
+              aria-label="profile in opendesktop of felipe uribe"
+            >
               <i class="icon-logo-tux"></i>
             </a>
           </div>

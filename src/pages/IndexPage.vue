@@ -4,11 +4,16 @@
       <div class="container">
         <div class="intro-info">
           <h1>
-            <span class="name">Hi, my name is</span><br />
-            <b>Felipe Uribe</b>. I bring ideas to life on the web through coding
-            and design.
+            <span class="name animated fadeInLeft2 delay-1s"
+              >Hi, my name is</span
+            >
+            <br />
+            <span class="animated fadeInLeft delay-3s">
+              <b>Felipe Uribe</b>. I bring ideas to life on the web through
+              coding and design.
+            </span>
           </h1>
-          <h2>
+          <h2 class="animated fadeInLeft delay-5s">
             I'm a developer who enjoys creating digital experiences in both
             design and development. Currently, I'm working on building products
             that are accessible and human-centered. I believe in the power of
@@ -55,7 +60,7 @@
 
           <div>
             <div class="me">
-              <img src="/imgs/me.jpg" alt="" />
+              <img src="/imgs/me.webp" alt="Felipe Uribe" />
             </div>
           </div>
         </div>
@@ -152,7 +157,6 @@ export default defineComponent({
       gsap.registerPlugin(ScrollTrigger);
 
       const boxes = gsap.utils.toArray<HTMLElement>('h1');
-      console.log('boxes', boxes);
       boxes.forEach((box) => {
         gsap.fromTo(
           box,
@@ -165,6 +169,27 @@ export default defineComponent({
               trigger: box,
               start: 'top 90%',
               end: '+=400',
+              scrub: true,
+              // markers: true, // For developer
+              id: 'project',
+            },
+          }
+        );
+      });
+
+      const boxes2 = gsap.utils.toArray<HTMLElement>('p');
+      boxes2.forEach((box) => {
+        gsap.fromTo(
+          box,
+          { opacity: 0.1, y: 50, scale: 0.9 },
+          {
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            scrollTrigger: {
+              trigger: box,
+              start: 'top 90%',
+              end: '+=200',
               scrub: true,
               // markers: true, // For developer
               id: 'project',
@@ -207,6 +232,11 @@ section {
 .about,
 .intro {
   display: flex;
+
+  span {
+    position: relative;
+    display: block;
+  }
 
   &::after {
     content: '';

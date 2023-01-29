@@ -98,6 +98,12 @@ $warning:         $yellow;
   /* globals */
   --header-height: 50px;
   --transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+
+  // Animated
+  --animate-duration: 1s;
+  --animate-delay: 200ms;
+  --animate-repeat: 1;
+
 }
 
 
