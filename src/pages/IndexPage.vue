@@ -214,7 +214,11 @@ export default defineComponent({
 section {
   // min-height: calc(100vh - 50px - 1rem);
   position: relative;
-  padding: 5rem 3rem;
+  padding: 3rem 0rem;
+
+  @media (min-width: $breakpoint-md-max) {
+    padding: 5rem 3rem;
+  }
 
   h1 {
     font-size: var(--font-size-lg);
@@ -235,7 +239,6 @@ section {
 
   span {
     position: relative;
-    display: block;
   }
 
   &::after {
