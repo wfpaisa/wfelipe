@@ -5,8 +5,8 @@ const routes: RouteRecordRaw[] = [
     path: '/',
     component: () => import('layouts/MainLayout.vue'),
     children: [
-      { path: '', component: () => import('pages/IndexPage.vue') },
-      { path: 'typo', component: () => import('pages/TypoPage.vue') },
+      { path: '', component: () => import('src/pages/PageIndex.vue') },
+      { path: 'typo', component: () => import('src/pages/PageTypo.vue') },
       // { path: 'codelog', component: () => import('pages/CodElogPage.vue') },
       // { path: 'projects', component: () => import('pages/ProjectsPage.vue') },
     ],
@@ -16,7 +16,7 @@ const routes: RouteRecordRaw[] = [
   // but you can also remove it
   {
     path: '/:catchAll(.*)*',
-    component: () => import('pages/ErrorNotFound.vue'),
+    component: () => import('src/pages/PageErrorNotFound.vue'),
   },
 ];
 
