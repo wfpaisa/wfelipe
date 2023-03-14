@@ -1,5 +1,5 @@
 <template>
-  <ProjecFull
+  <ProjecPreview
     v-for="(project, key) in projects"
     :project="project"
     :key="key"
@@ -10,7 +10,7 @@
 import { onMounted } from 'vue';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import ProjecFull from './ProjectPreview.vue';
+import ProjecPreview from './ProjectPreview.vue';
 
 export interface ILinks {
   link: string;

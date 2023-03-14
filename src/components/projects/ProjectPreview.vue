@@ -246,35 +246,6 @@ article {
 .bg-default {
   background-color: hsl(var(--color-bg-base), 17%);
 }
-.dialog-card {
-  background-color: hsl(var(--color-bg-base), 17%);
-  width: fit-content;
-  padding: 0px;
-  position: relative;
-
-  .dialog-card-bar {
-    z-index: 2;
-    width: 100%;
-    top: 0px;
-    left: 0px;
-
-    .q-btn {
-      background-color: hsla(var(--color-acent-base), 50%);
-      color: black;
-    }
-  }
-
-  .dialog-card-content {
-    padding: 0px;
-    overflow: auto;
-    height: calc(100% - 32px);
-
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-  }
-}
 
 .btn-fullscreen {
   background-color: hsla(var(--color-acent-base), 60%, 50%);

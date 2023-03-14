@@ -105,6 +105,10 @@
             motivation in the projects I have been involved in.
           </p>
         </div>
+
+        <hr style="margin: 4rem 0" />
+
+        <PortfolioList />
       </div>
     </section>
 
@@ -115,12 +119,10 @@
         <h1><span class="number">03</span>. Projects</h1>
 
         <div class="projects-list">
-          <HomeProjects />
+          <ProjectsList />
         </div>
       </div>
     </section>
-
-    <!-- <div class="codelog">CodELog</div> -->
   </q-page>
 </template>
 
@@ -128,13 +130,15 @@
 import { defineComponent, onMounted } from 'vue';
 import { useRouter } from 'vue-router';
 import ProjectsList from 'src/components/projects/ProjectsList.vue';
+import PortfolioList from 'components/portfolio/PortfolioList.vue';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 export default defineComponent({
   name: 'PageIndex',
   components: {
-    HomeProjects: ProjectsList,
+    ProjectsList: ProjectsList,
+    PortfolioList: PortfolioList,
   },
   setup() {
     /**
