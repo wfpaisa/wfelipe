@@ -1,10 +1,24 @@
 <template>
-  <li @click="dialog = !dialog" class="item transition">
-    <div class="icon"><q-icon name="sym_r_expand_content" /></div>
+  <li class="item transition">
     <div class="description">
       <div class="name">{{ item.name }}</div>
-      <ul>
+
+      <ul class="tags">
         <li v-for="tag in item.tags" :key="tag">{{ tag }}</li>
+      </ul>
+
+      <ul class="media">
+        <!-- Fullscreen -->
+        <li @click="dialog = !dialog" v-if="item.dialog">
+          <q-icon name="sym_r_photo" />
+        </li>
+
+        <!-- video -->
+        <li v-if="item.video">
+          <a :href="item.video" target="_blank">
+            <q-icon name="sym_r_movie" />
+          </a>
+        </li>
       </ul>
     </div>
     <!-- Full screen image -->
@@ -16,7 +30,7 @@
         </q-bar>
 
         <q-card-section class="dialog-card-content">
-          <div ref="imgFullScreen" v-html="item.dialogContent"></div>
+          <div ref="imgFullScreen" v-html="item.dialog"></div>
         </q-card-section>
       </q-card>
     </q-dialog>
@@ -53,24 +67,11 @@ const onDialogShow = () => {
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
 
-  .icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 1rem;
-
-    i {
-      background-color: hsla(var(--color-acent-base), 70%, 20%);
-      border-radius: 50%;
-      padding: 0.15rem;
-      font-size: 1.25rem;
-    }
-  }
   .name {
     font-size: var(--font-size-base);
   }
 
-  ul {
+  .tags {
     list-style: none;
     margin: 0px;
     padding: 0px;
@@ -85,12 +86,26 @@ const onDialogShow = () => {
     }
   }
 
-  &:hover {
-    background-color: hsla(var(--color-acent-base), 70%, 5%);
-    cursor: pointer;
+  .media {
+    list-style: none;
+    padding: 0px;
+    margin: 1rem 0 0.25rem 0;
 
-    .icon i {
-      background-color: hsla(var(--color-acent-base), 50%, 60%);
+    li {
+      display: inline-block;
+      margin-right: 1rem;
+      i {
+        cursor: pointer;
+        background-color: hsla(var(--color-acent-base), 60%, 40%);
+        border-radius: 50%;
+        padding: 0.5rem;
+        font-size: 1rem;
+        color: white;
+
+        &:hover {
+          background-color: hsla(var(--color-acent-base), 50%, 80%);
+        }
+      }
     }
   }
 }

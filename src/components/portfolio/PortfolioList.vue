@@ -19,68 +19,71 @@ import PortforlioPreview from './PortfolioPrevew.vue';
 export interface IPortfolioItem {
   name: string;
   tags: string[];
-  dialogContent: string;
+  dialog?: string;
+  video?: string;
 }
 
 const items: IPortfolioItem[] = [
   {
     name: 'Comodisimos - POS',
     tags: ['Vue', 'Javascript', 'Docker', 'Design', 'HTML', 'CSS', 'InfluxDB'],
-    dialogContent:
+    dialog:
       '<img src="imgs/projects/comodisimos/comodisimos-pos.webp" width="1920" height="9032"/>',
+    video: 'https://youtu.be/HPCiw_y72M4',
   },
   {
     name: 'Comodisimos - Web',
     tags: ['Javascript', 'React', 'Design', 'Vtex', 'HTML', 'CSS'],
-    dialogContent:
-      '<img src="imgs/projects/comodisimos/ecomodisimos.png" width="5120" height="9072"/>',
+    dialog:
+      '<img src="imgs/projects/comodisimos/comodisimos.webp" width="3072" height="16153"/>',
+    video: 'https://youtu.be/tjfFMJEdKUs',
+  },
+  {
+    name: 'Ecomodisimos - landing',
+    tags: ['Javascript', 'Vtex', 'HTML', 'CSS'],
+    dialog:
+      '<img src="imgs/projects/comodisimos/ecomodisimos.webp" width="5120" height="9072"/>',
+    video: 'https://youtu.be/T8f0HNz8K1I',
   },
   {
     name: 'Todo en Artes',
     tags: ['Docker', 'Javascript', 'Design', 'Prestashop', 'PHP', 'CSS'],
-    dialogContent: '',
+    dialog:
+      '<img src="imgs/projects/todo-en-artes/todoenartes.webp" width="1920" height="7106"/>',
   },
   {
     name: 'Codigital',
     tags: ['Javascript', 'Prestashop', 'Drupal', 'CSS', 'HTML', 'Angular'],
-    dialogContent: '',
+    dialog:
+      '<img src="imgs/projects/codigital/codigital.webp" width="5120" height="11462"/>',
+    video: 'https://youtu.be/zJn9D0gBM9o',
   },
   {
     name: 'Monte',
     tags: ['Javascript', 'Prestashop', 'CSS', 'HTML', 'PHP'],
-    dialogContent:
-      '<img src="imgs/projects/natalia/natalia-lafourcade.png" width="1280" height="5296"/>',
   },
   {
     name: 'Hogar universal',
     tags: ['Javascript', 'Drupal', 'CSS', 'HTML', 'PHP'],
-    dialogContent:
-      '<img src="imgs/projects/natalia/natalia-lafourcade.png" width="1280" height="5296"/>',
   },
   {
     name: 'El Bellanita',
     tags: ['Javascript', 'Drupal', 'CSS', 'HTML', 'PHP'],
-    dialogContent:
-      '<img src="imgs/projects/natalia/natalia-lafourcade.png" width="1280" height="5296"/>',
   },
   {
     name: 'Codigital',
     tags: ['Javascript', 'CSS', 'HTML', 'PHP'],
-    dialogContent:
-      '<img src="imgs/projects/natalia/natalia-lafourcade.png" width="1280" height="5296"/>',
   },
 
   {
     name: 'Ostinata',
     tags: ['Javascript', 'CSS', 'HTML', 'PHP'],
-    dialogContent:
-      '<img src="imgs/projects/natalia/natalia-lafourcade.png" width="1280" height="5296"/>',
   },
   // Done
   {
     name: 'Natalia Lafourcade',
     tags: ['CSS', 'HTML', 'PHP'],
-    dialogContent:
+    dialog:
       '<img src="imgs/projects/natalia/natalia-lafourcade.png" width="1280" height="5296"/>',
   },
 ];
