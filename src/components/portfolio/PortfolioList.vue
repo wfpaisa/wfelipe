@@ -72,6 +72,7 @@ const items: IPortfolioItem[] = [
     tags: ['Javascript', 'CSS', 'HTML', 'PHP'],
     dialog:
       '<img src="imgs/projects/ostinatta/ostinatta.webp" width="1400" height="10686"/>',
+    video: 'https://youtu.be/G6pcljDeQz0',
   },
   {
     name: 'El Bellanita',
