@@ -22,6 +22,19 @@ export interface IPortfolioItem {
 
 const items: IPortfolioItem[] = [
   {
+    name: 'Codigital',
+    tags: ['Javascript', 'Prestashop', 'Drupal', 'CSS', 'HTML', 'Angular'],
+    dialog:
+      '<img src="imgs/projects/codigital/codigital.webp" width="5120" height="11462"/>',
+    video: 'https://youtu.be/zJn9D0gBM9o',
+  },
+  {
+    name: 'Monte',
+    tags: ['Javascript', 'Prestashop', 'CSS', 'HTML', 'PHP'],
+    dialog:
+      '<img src="imgs/projects/monte/monte.webp" width="1878" height="12857"/>',
+  },
+  {
     name: 'Comodisimos - POS',
     tags: ['Vue', 'Javascript', 'Docker', 'Design', 'HTML', 'CSS', 'InfluxDB'],
     dialog:
@@ -47,19 +60,6 @@ const items: IPortfolioItem[] = [
     tags: ['Docker', 'Javascript', 'Design', 'Prestashop', 'PHP', 'CSS'],
     dialog:
       '<img src="imgs/projects/todo-en-artes/todoenartes.webp" width="1916" height="8169"/>',
-  },
-  {
-    name: 'Codigital',
-    tags: ['Javascript', 'Prestashop', 'Drupal', 'CSS', 'HTML', 'Angular'],
-    dialog:
-      '<img src="imgs/projects/codigital/codigital.webp" width="5120" height="11462"/>',
-    video: 'https://youtu.be/zJn9D0gBM9o',
-  },
-  {
-    name: 'Monte',
-    tags: ['Javascript', 'Prestashop', 'CSS', 'HTML', 'PHP'],
-    dialog:
-      '<img src="imgs/projects/monte/monte.webp" width="1878" height="12857"/>',
   },
   {
     name: 'Hogar universal',
