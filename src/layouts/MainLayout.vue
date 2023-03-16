@@ -2,24 +2,17 @@
   <q-layout view="hHh lpR ffr">
     <q-header>
       <q-toolbar>
-        <q-toolbar-title>
-          <!-- <router-link :to="{ path: '/' }" class="logo"> -->
-          <div class="logo">
-            <span class="icon-logo" @click="changeColor">
+        <q-toolbar-title style="overflow: visible">
+          <div class="logo tada">
+            <span class="icon-logo" @click="changeColor" title="Change color">
               <span class="path1"></span>
               <span class="path2"></span>
             </span>
           </div>
-          <!-- </router-link> -->
         </q-toolbar-title>
 
         <div class="menu">
           [
-          <!-- <router-link
-            v-for="(link, key) in essentialLinks"
-            :key="key"
-            :to="{ path: link.link }"
-          > -->
           <a
             v-for="(link, key) in essentialLinks"
             :key="key"
@@ -28,7 +21,6 @@
           >
             <span>0{{ key + 1 }}.</span> {{ link.title }}
           </a>
-          <!-- </router-link> -->
           ]
         </div>
 
@@ -110,19 +102,6 @@ import { defineComponent, ref } from 'vue';
 import EssentialLink from 'src/layouts/components/NavLinks.vue';
 
 const linksList = [
-  // {
-  //   title: 'Home',
-  //   caption: '',
-  //   icon: 'sym_r_home_app_logo',
-  //   link: '/',
-  // },
-  // {
-  //   title: 'CodElog',
-  //   caption: 'Tech blog',
-  //   icon: 'sym_r_code_blocks',
-  //   link: '/codelog',
-  // },
-
   {
     title: 'About',
     caption: 'Felipe Uribe',
@@ -184,14 +163,19 @@ export default defineComponent({
 
 <style lang="scss">
 header {
-  .icon-logo {
-    font-size: 2rem;
-    transition: var(--transition);
-    color: hsl(var(--color-acent-base), 74%);
-    cursor: pointer;
+  .logo {
+    display: inline-block;
 
-    &:hover {
-      color: hsl(var(--color-acent-base), 68%);
+    .icon-logo {
+      font-size: 2rem;
+      transition: var(--transition);
+      color: hsl(var(--color-acent-base), 74%);
+      cursor: pointer;
+      display: inline-block;
+
+      &:hover {
+        color: hsl(var(--color-acent-base), 68%);
+      }
     }
   }
 
