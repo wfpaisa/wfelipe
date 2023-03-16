@@ -2,10 +2,7 @@
   <div>
     <h3>PORTFOLIO</h3>
 
-    <p>
-      Some of the developments I have carried out over the course of these 14
-      years.
-    </p>
+    <p>These are some projects I have worked on.</p>
 
     <ul>
       <PortforlioPreview v-for="(item, key) in items" :item="item" :key="key" />
@@ -49,7 +46,7 @@ const items: IPortfolioItem[] = [
     name: 'Todo en Artes',
     tags: ['Docker', 'Javascript', 'Design', 'Prestashop', 'PHP', 'CSS'],
     dialog:
-      '<img src="imgs/projects/todo-en-artes/todoenartes.webp" width="1920" height="7106"/>',
+      '<img src="imgs/projects/todo-en-artes/todoenartes.webp" width="1916" height="8169"/>',
   },
   {
     name: 'Codigital',
@@ -61,25 +58,27 @@ const items: IPortfolioItem[] = [
   {
     name: 'Monte',
     tags: ['Javascript', 'Prestashop', 'CSS', 'HTML', 'PHP'],
+    dialog:
+      '<img src="imgs/projects/monte/monte.webp" width="1878" height="12857"/>',
   },
   {
     name: 'Hogar universal',
     tags: ['Javascript', 'Drupal', 'CSS', 'HTML', 'PHP'],
+    dialog:
+      '<img src="imgs/projects/universal/universal.webp" width="1400" height="9732"/>',
+  },
+  {
+    name: 'Ostinata',
+    tags: ['Javascript', 'CSS', 'HTML', 'PHP'],
+    dialog:
+      '<img src="imgs/projects/ostinatta/ostinatta.webp" width="1400" height="10686"/>',
   },
   {
     name: 'El Bellanita',
     tags: ['Javascript', 'Drupal', 'CSS', 'HTML', 'PHP'],
+    dialog:
+      '<img src="imgs/projects/el-bellanita/el-bellanita.webp" width="2000" height="4683"/>',
   },
-  {
-    name: 'Codigital',
-    tags: ['Javascript', 'CSS', 'HTML', 'PHP'],
-  },
-
-  {
-    name: 'Ostinata',
-    tags: ['Javascript', 'CSS', 'HTML', 'PHP'],
-  },
-  // Done
   {
     name: 'Natalia Lafourcade',
     tags: ['CSS', 'HTML', 'PHP'],
