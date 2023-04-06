@@ -63,7 +63,6 @@ const dialog = ref(false);
 const imgFullScreen = ref<HTMLInputElement>();
 
 const onDialogShow = () => {
-  console.log('imgFullScreen', imgFullScreen);
   if (window.innerWidth < 480 && imgFullScreen.value)
     panzoom(imgFullScreen.value);
 };
