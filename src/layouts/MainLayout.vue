@@ -142,7 +142,7 @@ export default defineComponent({
      * Welcome console
      */
     window.console.log(
-      '%c¡Bienvenido! Puedes ver el código fuente en: https://github.com/wfpaisa/wfelipe',
+      '%c¡Bienvenido! Puedes ver el código fuente en: https://github.com/wfpaisa/wfelipe - v1.0',
       'background: linear-gradient(135deg , #492279 0%,  #0CC8BD 100%); color: #fff; border-radius: 5px; font-size: 16px; font-weight: bold; padding: 4px 8px;'
     );
 
