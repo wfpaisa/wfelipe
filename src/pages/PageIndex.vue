@@ -522,6 +522,6 @@ section {
   width: 1px;
   height: 1px;
   position: absolute;
-  background-image: url('imgs/loading.gif');
+  background-image: url('/imgs/loading.gif');
 }
 </style>

@@ -10,29 +10,23 @@
       <ul class="media">
         <!-- Fullscreen -->
         <li @click="dialog = !dialog" v-if="item.dialog">
-          <!-- <q-icon name="sym_r_photo" /> -->
           <q-btn
             label="preview"
             class="btn-custom"
             icon="sym_r_photo"
             size="sm"
           ></q-btn>
-          <!-- color="secondary"
-            text-color="black" -->
         </li>
 
         <!-- video -->
         <li v-if="item.video">
           <a :href="item.video" target="_blank">
-            <!-- <q-icon name="sym_r_movie" /> -->
             <q-btn
               label="Video"
               class="btn-custom"
               icon="sym_r_movie"
               size="sm"
             ></q-btn>
-            <!-- color="secondary"
-              text-color="black" -->
           </a>
         </li>
       </ul>

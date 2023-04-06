@@ -2,7 +2,10 @@
   <div>
     <h3>PORTFOLIO</h3>
 
-    <p>These are some projects I have worked on.</p>
+    <p>
+      In these 14 years, I have helped bring to life more than 300 websites,
+      here are some of the highlights.
+    </p>
 
     <ul>
       <PortforlioPreview v-for="(item, key) in items" :item="item" :key="key" />
