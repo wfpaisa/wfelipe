@@ -1,6 +1,6 @@
-# Web wfelipe (wfelipe)
+# Felipe Uribe portfolio http://wfelipe.com
 
-A web for the site of wfelipe.
+"This is the source code of Felipe Uribe's website portfolio. It's open-source, so you can use it if you want. Just remember to mention me if you use it. The website uses the following technologies: Quasar, Vue, Typescript, and Sass."
 
 ## Install the dependencies
 

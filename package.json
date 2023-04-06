@@ -1,9 +1,9 @@
 {
   "name": "wfelipe",
   "version": "1.0.1",
-  "description": "a web for Felipe Uribe",
-  "productName": "Felipe Uribe Aristizabal",
-  "author": "Felipe Uribe <wfpaisa@gmail.com>",
+  "productName": "Felipe Uribe",
+  "description": "Felipe Uribe Portfolio - Bringing ideas to life on the web through coding and design",
+  "author": "Felipe Uribe <hi@wfelipe.com>",
   "private": true,
   "scripts": {
     "lint": "eslint --ext .js,.ts,.vue ./",

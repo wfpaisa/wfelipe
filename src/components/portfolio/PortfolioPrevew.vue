@@ -3,20 +3,36 @@
     <div class="description">
       <div class="name">{{ item.name }}</div>
 
-      <ul class="tags">
-        <li v-for="tag in item.tags" :key="tag">{{ tag }}</li>
-      </ul>
+      <div class="tags">
+        <div v-for="tag in item.tags" :key="tag" class="tag">{{ tag }}</div>
+      </div>
 
       <ul class="media">
         <!-- Fullscreen -->
         <li @click="dialog = !dialog" v-if="item.dialog">
-          <q-icon name="sym_r_photo" />
+          <!-- <q-icon name="sym_r_photo" /> -->
+          <q-btn
+            label="preview"
+            class="btn-custom"
+            icon="sym_r_photo"
+            size="sm"
+          ></q-btn>
+          <!-- color="secondary"
+            text-color="black" -->
         </li>
 
         <!-- video -->
         <li v-if="item.video">
           <a :href="item.video" target="_blank">
-            <q-icon name="sym_r_movie" />
+            <!-- <q-icon name="sym_r_movie" /> -->
+            <q-btn
+              label="Video"
+              class="btn-custom"
+              icon="sym_r_movie"
+              size="sm"
+            ></q-btn>
+            <!-- color="secondary"
+              text-color="black" -->
           </a>
         </li>
       </ul>
@@ -69,20 +85,25 @@ const onDialogShow = () => {
 
   .name {
     font-size: var(--font-size-base);
+    margin-bottom: 0.5rem;
+  }
+
+  .description {
+    display: flex;
+    flex-direction: column;
   }
 
   .tags {
-    list-style: none;
-    margin: 0px;
-    padding: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    align-items: flex-start;
+    align-content: flex-start;
+    justify-content: flex-start;
+    gap: 0.15rem;
 
-    li {
-      display: inline-block;
-      margin-right: 0.5rem;
+    .tag {
       font-size: 70%;
-      font-weight: 300;
-      padding: 0px 0.25rem;
-      background-color: hsla(var(--color-acent-base), 70%, 10%);
     }
   }
 
@@ -113,5 +134,17 @@ const onDialogShow = () => {
 .dialog-card {
   width: 80%;
   max-width: 100%;
+}
+
+.btn-custom {
+  background-color: var(--color-complement);
+  color: black;
+  font-weight: bold;
+  letter-spacing: 2px;
+  transition: var(--transition);
+
+  &:hover {
+    transform: scale(1.05, 1.05);
+  }
 }
 </style>

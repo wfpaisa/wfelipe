@@ -73,6 +73,7 @@
               href="https://github.com/wfpaisa/"
               target="_blank"
               aria-label="profile in github of felipe uribe"
+              title="Profile in github of felipe uribe"
             >
               <i class="icon-logo-github"></i>
             </a>
@@ -80,6 +81,7 @@
               href="https://www.linkedin.com/in/felipe-uribe"
               target="_blank"
               aria-label="profile in linkedin of felipe uribe"
+              title="Profile in linkedin of felipe uribe"
             >
               <i class="icon-logo-linkedin"></i>
             </a>
@@ -87,6 +89,7 @@
               href="https://www.opendesktop.org/u/wfpaisa"
               target="_blank"
               aria-label="profile in opendesktop of felipe uribe"
+              title="Profile in opendesktop of felipe uribe"
             >
               <i class="icon-logo-tux"></i>
             </a>
@@ -136,6 +139,14 @@ export default defineComponent({
     const rightDrawerOpen = ref(false);
 
     /**
+     * Welcome console
+     */
+    window.console.log(
+      '%c¡Bienvenido! Puedes ver el código fuente en: https://github.com/wfpaisa/wfelipe',
+      'background: linear-gradient(135deg , #492279 0%,  #0CC8BD 100%); color: #fff; border-radius: 5px; font-size: 16px; font-weight: bold; padding: 4px 8px;'
+    );
+
+    /**
      * Change default colors
      */
     const changeColor = () => {
@@ -144,9 +155,12 @@ export default defineComponent({
 
       let random1 = Math.floor(Math.random() * (max - min + 1)) + min;
       let random2 = Math.floor(Math.random() * (max - min + 1)) + min;
+      let random3 = Math.floor(Math.random() * (max - min + 1)) + min;
       let doc = document.documentElement.style;
+
       doc.setProperty('--color-bg-base', `${random1}, 22%`);
       doc.setProperty('--color-acent-base', `${random2}, 100%`);
+      doc.setProperty('--color-complement-base', `${random3}, 100%`);
     };
 
     return {
@@ -242,6 +256,9 @@ header {
 
 .footer {
   background: none;
+  a {
+    color: var(--color-complement);
+  }
 
   .content {
     color: var(--color-fg);
@@ -269,6 +286,7 @@ header {
 
       a {
         color: white;
+
         &:hover {
           color: hsl(var(--color-acent-base), 74%);
         }

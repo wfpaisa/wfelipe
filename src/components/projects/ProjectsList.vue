@@ -42,13 +42,49 @@ export interface IProject {
 }
 
 const projects: IProject[] = [
+  // --- Plane icons
+  {
+    name: 'Icon theme',
+    position: 'dir-lf',
+    description:
+      'A simple and modern set of icons, designed in Inkscape in the sizes: 16px, 24px, 32px, 48px, 64p 96px, 128px, uses JavaScript to generate each file in different sizes.',
+    links: [
+      {
+        link: 'https://github.com/wfpaisa/plane-icon-theme',
+        target: '_blank',
+        aria: 'repo plane theme link',
+        icon: 'icon-logo-github',
+      },
+      {
+        link: 'https://www.gnome-look.org/p/1178976/',
+        target: '_blank',
+        aria: 'open project in gnome-look',
+        icon: 'icon-logo-tux',
+      },
+    ],
+    tags: ['Design', 'SVG', 'Javascript'],
+    images: {
+      small: {
+        src: 'imgs/projects/icon-theme/icon-theme.webp',
+        alt: 'plane icon theme',
+        width: '1600',
+        height: '1000',
+      },
+      fullscreen: {
+        src: 'imgs/projects/icon-theme/icon-theme-full.webp',
+        alt: 'plane icon theme',
+        width: '1920',
+        height: '8219',
+      },
+    },
+  },
   // --- Plane theme
   {
     name: 'Plane GTK theme',
-    position: 'dir-lf',
+    position: 'dir-rl',
     description:
       'A beautiful dark theme for Gnome Linux with a modern and minimalistic design, making it easy the eyes and providing a sleek look for your desktop.',
-    tags: ['CSS', 'SASS', 'Javascript', 'Svg'],
+    tags: ['CSS', 'SASS', 'Javascript', 'Svg', 'Design'],
     images: {
       small: {
         src: 'imgs/projects/plane-theme/plane-theme-s.webp',
@@ -77,43 +113,6 @@ const projects: IProject[] = [
         icon: 'icon-logo-tux',
       },
     ],
-  },
-
-  // --- Plane icons
-  {
-    name: 'Icon theme',
-    description:
-      'A simple and modern set of icons, designed in Inkscape in the sizes: 16px, 24px, 32px, 48px, 64p 96px, 128px, uses JavaScript to generate each file in different sizes.',
-    links: [
-      {
-        link: 'https://github.com/wfpaisa/plane-icon-theme',
-        target: '_blank',
-        aria: 'repo plane theme link',
-        icon: 'icon-logo-github',
-      },
-      {
-        link: 'https://www.gnome-look.org/p/1178976/',
-        target: '_blank',
-        aria: 'open project in gnome-look',
-        icon: 'icon-logo-tux',
-      },
-    ],
-    position: 'dir-rl',
-    tags: ['SVG', 'Javascript'],
-    images: {
-      small: {
-        src: 'imgs/projects/icon-theme/icon-theme.webp',
-        alt: 'plane icon theme',
-        width: '1600',
-        height: '1000',
-      },
-      fullscreen: {
-        src: 'imgs/projects/icon-theme/icon-theme-full.webp',
-        alt: 'plane icon theme',
-        width: '1920',
-        height: '8219',
-      },
-    },
   },
 ];
 

@@ -63,9 +63,11 @@
           </a>
         </div>
 
-        <ul class="tags">
-          <li v-for="(tag, key) in project.tags" :key="key">{{ tag }}</li>
-        </ul>
+        <div class="tags">
+          <span class="tag" v-for="(tag, key) in project.tags" :key="key">{{
+            tag
+          }}</span>
+        </div>
       </div>
     </div>
   </article>
@@ -149,7 +151,7 @@ article {
       border-radius: var(--border-radius-base);
 
       .icons {
-        color: var(--color-yellow);
+        color: var(--color-green);
         font-size: var(--font-size-lg);
         margin: 0 -0.4rem;
 
@@ -159,36 +161,30 @@ article {
       }
 
       h2 {
-        margin-top: 1rem;
+        margin: 1rem 0;
         color: hsl(var(--color-acent-base), 94%);
       }
 
       .project-desc {
         font-size: var(--font-size-sm);
-        margin: 1rem 0;
+        line-height: 1.1rem;
 
         a {
-          color: hsla(var(--color-acent-base), 70%, 60%);
+          color: var(--color-complement);
           display: inline-block;
           font-size: var(--font-size-md);
+          margin: 0.5rem 0;
+
           &:hover {
-            color: hsl(var(--color-acent-base), 70%);
+            transform: scale(1.2, 1.2);
           }
         }
       }
 
-      ul {
-        margin: 0px;
-        padding: 0px;
-
-        li {
-          display: inline-block;
-          margin-left: 0.5rem;
-          font-size: var(--font-size-sm);
-          font-weight: 300;
-          padding: 0px 0.25rem;
-          background-color: hsla(var(--color-acent-base), 70%, 10%);
-        }
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.2rem;
       }
     }
   }
@@ -240,6 +236,11 @@ article {
       border-bottom: none;
       box-shadow: 0.5rem 0 0.5rem hsl(var(--color-bg-base), 14%);
     }
+
+    .tags {
+      width: 100%;
+      justify-content: flex-end;
+    }
   }
 }
 
@@ -248,7 +249,9 @@ article {
 }
 
 .btn-fullscreen {
-  background-color: hsla(var(--color-acent-base), 60%, 50%);
+  // background-color: hsla(var(--color-acent-base), 60%, 50%);
+  background-color: var(--color-complement);
+  // color: var(--color-complement);
   color: black;
   position: absolute;
   z-index: 3;

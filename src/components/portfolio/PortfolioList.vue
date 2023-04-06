@@ -35,11 +35,17 @@ const items: IPortfolioItem[] = [
       '<img src="imgs/projects/monte/monte.webp" width="1878" height="12857"/>',
   },
   {
-    name: 'Comodisimos - POS',
-    tags: ['Vue', 'Javascript', 'Docker', 'Design', 'HTML', 'CSS', 'InfluxDB'],
+    name: 'Ecomodisimos - landing',
+    tags: ['Javascript', 'Vtex', 'HTML', 'CSS'],
     dialog:
-      '<img src="imgs/projects/comodisimos/comodisimos-pos.webp" width="1920" height="9032"/>',
-    video: 'https://youtu.be/HPCiw_y72M4',
+      '<img src="imgs/projects/comodisimos/ecomodisimos.webp" width="5120" height="9072"/>',
+    video: 'https://youtu.be/T8f0HNz8K1I',
+  },
+  {
+    name: 'Hogar universal',
+    tags: ['Javascript', 'Drupal', 'CSS', 'HTML', 'PHP'],
+    dialog:
+      '<img src="imgs/projects/universal/universal.webp" width="1400" height="9732"/>',
   },
   {
     name: 'Comodisimos - Web',
@@ -49,23 +55,11 @@ const items: IPortfolioItem[] = [
     video: 'https://youtu.be/tjfFMJEdKUs',
   },
   {
-    name: 'Ecomodisimos - landing',
-    tags: ['Javascript', 'Vtex', 'HTML', 'CSS'],
+    name: 'Comodisimos - POS',
+    tags: ['Vue', 'Javascript', 'Docker', 'Design', 'HTML', 'CSS', 'InfluxDB'],
     dialog:
-      '<img src="imgs/projects/comodisimos/ecomodisimos.webp" width="5120" height="9072"/>',
-    video: 'https://youtu.be/T8f0HNz8K1I',
-  },
-  {
-    name: 'Todo en Artes',
-    tags: ['Docker', 'Javascript', 'Design', 'Prestashop', 'PHP', 'CSS'],
-    dialog:
-      '<img src="imgs/projects/todo-en-artes/todoenartes.webp" width="1916" height="8169"/>',
-  },
-  {
-    name: 'Hogar universal',
-    tags: ['Javascript', 'Drupal', 'CSS', 'HTML', 'PHP'],
-    dialog:
-      '<img src="imgs/projects/universal/universal.webp" width="1400" height="9732"/>',
+      '<img src="imgs/projects/comodisimos/comodisimos-pos.webp" width="1920" height="9032"/>',
+    video: 'https://youtu.be/HPCiw_y72M4',
   },
   {
     name: 'Ostinata',
@@ -73,6 +67,12 @@ const items: IPortfolioItem[] = [
     dialog:
       '<img src="imgs/projects/ostinatta/ostinatta.webp" width="1400" height="10686"/>',
     video: 'https://youtu.be/G6pcljDeQz0',
+  },
+  {
+    name: 'Todo en Artes',
+    tags: ['Docker', 'Javascript', 'Design', 'Prestashop', 'PHP', 'CSS'],
+    dialog:
+      '<img src="imgs/projects/todo-en-artes/todoenartes.webp" width="1916" height="8169"/>',
   },
   {
     name: 'El Bellanita',

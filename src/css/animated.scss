@@ -127,3 +127,20 @@
   animation-duration: 6s;
   animation-iteration-count: infinite;
 }
+
+.scrolldown {
+  animation-name: scrolldown;
+  animation-duration: 2s;
+}
+// Fade in left
+@keyframes scrolldown {
+  from {
+    opacity: 0;
+    transform: translate3d(-10%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, -15px, 0);
+  }
+}

@@ -1,25 +1,29 @@
 <template>
   <q-page>
     <section class="intro">
+      <div class="mouse">
+        <span class="animated infinite scrolldown"></span>
+      </div>
+
       <div class="container">
         <div class="intro-info">
           <h1>
-            <span class="name animated fadeInLeft2 delay-1s"
-              >Hi, my name is</span
-            >
+            <span class="name animated fadeInLeft2 delay-1s">
+              Hi, my name is
+            </span>
             <br />
-            <span class="animated fadeInLeft delay-3s">
-              <b>Felipe Uribe</b>. I bring ideas to life on the web through
+            <span class="animated fadeInLeft delay-2s">
+              <b>Felipe Uribe</b>. Bringing ideas to life on the web through
               coding and design.
             </span>
           </h1>
-          <h2 class="animated fadeInLeft delay-5s">
-            I'm a developer who enjoys creating digital experiences in both
-            design and development. Currently, I'm working on building products
-            that are accessible and human-centered. I believe in the power of
-            technology to improve people's lives and I strive to make it more
-            inclusive and user-friendly.
-          </h2>
+          <p class="animated fadeInLeft delay-3s">
+            As a developer who enjoys creating digital experiences in both
+            design and development, I am constantly working on building products
+            that are accessible and human-centered. I firmly believe in the
+            power of technology to improve people's lives, and I always strive
+            to make it more inclusive and user-friendly.
+          </p>
         </div>
       </div>
     </section>
@@ -30,7 +34,7 @@
 
         <div class="flex-center">
           <div>
-            <h1><span class="number">01</span>. About me</h1>
+            <h2><span class="number">01</span>. About me</h2>
 
             <p>
               Since I was very young, I have always been a curious person and I
@@ -46,15 +50,15 @@
               Here are a few *technologies I have been working with recently.
             </p>
             <ul>
-              <li>CSS/Sass</li>
-              <li>Javascript/NodeJs</li>
-              <li>Vue/React/Angular</li>
-              <li>Strapi</li>
-              <li>HTML</li>
-              <li>Linux/Docker</li>
-              <li>Inkscape/Figma/SVG</li>
-              <li>UX/UI</li>
-              <li>PostgreSQL/InfluxDB</li>
+              <li><span class="tag">CSS/Sass</span></li>
+              <li><span class="tag">Javascript/NodeJs</span></li>
+              <li><span class="tag">Vue/React/Angular</span></li>
+              <li><span class="tag">Strapi</span></li>
+              <li><span class="tag">HTML</span></li>
+              <li><span class="tag">Linux/Docker</span></li>
+              <li><span class="tag">Inkscape/Figma/SVG</span></li>
+              <li><span class="tag">UX/UI</span></li>
+              <li><span class="tag">PostgreSQL/InfluxDB</span></li>
             </ul>
           </div>
 
@@ -72,7 +76,8 @@
         <div class="anchor" id="work"></div>
 
         <div class="flex-center">
-          <h1><span class="number">02</span>. Work</h1>
+          <h2><span class="number">02</span>. Work</h2>
+
           <p>
             <span>05.</span>Currently, in my free time, I experiment with new
             technologies, decorate interfaces and iconography for Linux
@@ -116,7 +121,7 @@
       <div class="container">
         <div class="anchor" id="projects"></div>
 
-        <h1><span class="number">03</span>. Projects</h1>
+        <h2><span class="number">03</span>. Personal projects</h2>
 
         <div class="projects-list">
           <ProjectsList />
@@ -224,8 +229,10 @@ section {
     padding: 5rem 3rem;
   }
 
-  h1 {
+  h1,
+  h2 {
     font-size: var(--font-size-lg);
+    font-weight: normal;
   }
 }
 .number {
@@ -289,7 +296,7 @@ section {
     }
 
     b {
-      color: hsl(var(--color-acent-base), 98%);
+      color: hsl(var(--color-complement-base), 92%);
     }
 
     .name {
@@ -301,8 +308,40 @@ section {
       font-family: var(--font-family-body);
     }
 
-    h2 {
+    p {
       font-size: var(--font-size-md);
+      font-weight: 100;
+      font-family: var(--font-family-title);
+      margin: var(--space-24) 0;
+      transition: all 0.3s ease-in-out;
+      color: hsl(var(--color-acent-base), 94%);
+      line-height: var(--font-lineheight-md);
+      letter-spacing: 0.05rem;
+    }
+  }
+
+  .mouse {
+    background-color: hsla(var(--color-acent-base), 80%, 5%);
+    border-radius: 8px;
+    border: 1px solid hsla(var(--color-acent-base), 80%, 30%);
+    bottom: 40px;
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.3);
+    height: 30px;
+    left: 50%;
+    position: absolute;
+    width: 20px;
+    margin-left: -10px;
+
+    span {
+      display: inline-block;
+      height: 8px;
+      width: 4px;
+      background: hsla(var(--color-acent-base), 70%, 80%);
+      position: absolute;
+      left: 50%;
+      bottom: 2px;
+      margin-left: -2px;
+      border-radius: 4px;
     }
   }
 }
@@ -312,12 +351,16 @@ section {
   align-items: center;
   // color: hsl(var(--color-bg-base), 26%);
   // background-color: hsl(var(--color-acent-base), 96%);
+  .container {
+    display: flex;
+  }
 
   .flex-center {
     display: flex;
     gap: 2rem;
     align-items: center;
     flex-direction: column;
+    justify-content: center;
 
     @media (min-width: $breakpoint-xs-max) {
       flex-direction: row;
@@ -355,10 +398,16 @@ section {
   ul {
     font-size: var(--font-size-sm);
     color: hsl(var(--color-acent-base), 74%);
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
 
     @media (min-width: $breakpoint-sm-max) {
       column-count: 2;
     }
+  }
+  li {
+    margin-bottom: 0.5rem;
   }
 }
 
@@ -366,21 +415,51 @@ section {
   display: flex;
   align-items: center;
 
+  .timeline {
+    position: relative;
+    display: block;
+    padding: 0 0 0 3rem;
+  }
+
   p {
+    position: relative;
+    padding: 0rem 0 1.5rem 3rem;
+    margin-bottom: 0px;
+
+    &::before {
+      content: '';
+      height: 100%;
+      width: 1px;
+      background: hsla(var(--color-acent-base), 74%, 20%);
+      position: absolute;
+      left: 1.25rem;
+      z-index: 1;
+    }
+
+    &:last-child::before {
+      display: none;
+    }
+
     span {
       color: hsl(var(--color-acent-base), 74%);
-      // margin-left: -2.5rem;
       margin-right: 0.5rem;
-      position: relative;
+      position: absolute;
+      left: 1rem;
+      z-index: 2;
+      font-size: 80%;
 
       &::after {
+        background: hsl(var(--color-bg-base), 17%);
         border: 1px solid hsla(var(--color-acent-base), 74%, 20%);
+        border-left-width: 4px;
+        border-radius: 0.2rem;
         content: '';
         height: 120%;
         width: 120%;
         position: absolute;
-        top: -0.5rem;
-        left: -1rem;
+        top: -0.35rem;
+        left: -0.75rem;
+        z-index: -1;
       }
     }
   }
