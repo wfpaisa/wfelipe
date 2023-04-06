@@ -12,7 +12,16 @@ pnpm i
 
 ```bash
 pnpm l
+
 ```
+
+## Tasks
+
+1. Remove Google Tag Manager in `index.html`
+2. Check all social tags in `index.html`
+3. Check title,description in `package.json`
+4. Change custom colors in: `quasar.variables.scss`
+5. Remove all assets: `public/**`
 
 ### Lint the files
 

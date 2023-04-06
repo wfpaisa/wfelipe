@@ -29,6 +29,7 @@
     </section>
 
     <section class="about">
+      <div class="preloadimage"></div>
       <div class="container">
         <div class="anchor" id="about"></div>
 
@@ -515,5 +516,12 @@ section {
     gap: 1rem;
     flex-wrap: wrap;
   }
+}
+
+.preloadimage {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  background-image: url('imgs/loading.gif');
 }
 </style>

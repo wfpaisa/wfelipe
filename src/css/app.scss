@@ -218,6 +218,11 @@ a {
   }
 
   .dialog-card-content {
+    background: #000;
+    background-image: url('imgs/loading.gif');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 30%;
     padding: 0px;
     overflow: auto;
     height: calc(100% - 32px);
@@ -231,12 +236,8 @@ a {
 }
 
 .tag {
-  // background: hsla(var(--color-acent-base), 60%, 0.2);
-  // background-color: hsla(var(--color-complement-base), 70%, 0.2);
   background-color: rgba(255, 255, 255, 0.1);
   color: var(--color-fg);
-  // color: black;
-
   display: inline-block;
   padding: 1px 1rem 0 1.5rem;
   border-radius: 0.25rem;
